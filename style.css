@@ -1,4 +1,47 @@
-body {background-color:tan;}
-h1{color:green;}
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 
+body {
+  background-color: black;
+}
 
+.window {
+  display: inline-block;
+  position: absolute;
+  margin-top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.window_header {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  color: grey;
+}
+
+.window_inputs {
+  margin: auto;
+  width: 80%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.row_label {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+
+.disable {
+  display: none;
+}
