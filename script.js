@@ -5,8 +5,14 @@ function compute() {
   interest = (p * ((rate * years) / 100)).toFixed(2);
   target_year = new Date().getFullYear() + years;
 
+  if (p <= 0) {
+    window.alert("Amount must be positive (and > 0)");
+    document.getElementById("principal").focus();
+    return;
+  }
+
   result = document.getElementById("result");
-  result.innerHTML = `If you deposit ${p},<br/>at an interest rate of ${rate}%.<br\> You will receive an amount of ${interest}, <br/>in the year ${target_year}`;
+  result.innerHTML = `If you deposit <mark>${p}</mark>,<br/>at an interest rate of <mark>${rate}%</mark>.<br\> You will receive an amount of <mark>${interest}</mark>, <br/>in the year <mark>${target_year}</mark>`;
   document.getElementById("result_wrapper").classList.remove("disable");
 }
 
